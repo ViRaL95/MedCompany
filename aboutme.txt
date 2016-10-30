@@ -1,0 +1,10 @@
+Shopping Cart
+Different Kinds of Medication 
+HomePage 
+Sign In Page on the HomePage
+Vitamins
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+In this project I am going to be using html css, php and then javascript in order to create a web responsive application which you can store your new medicines in a shopping cart. It has one login name which I will create. I didnt want users creating tons of new login names and passwords as of now so I simply gave them one.
