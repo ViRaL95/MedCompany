@@ -4,7 +4,7 @@
 		button.disabled="true";
 			
 		$("#loginname").keyup(function(){
-			loginname=document.getElementById("loginname");
+			loginname=document.getElementById("username");
 			password=document.getElementById("password");
 			//if login name does contain a value
 			if(loginname.value){
@@ -25,7 +25,7 @@
 		$("#password").keyup(function(){
 			//if a key press has occured in the password field 
 			password=document.getElementById("password");
-			loginname=document.getElementById("loginname");
+			loginname=document.getElementById("username");
 
 			if(password.value){
 				if(loginname.value){

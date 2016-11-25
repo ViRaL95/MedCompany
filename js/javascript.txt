@@ -1,5 +1,0 @@
-javascript 
-
-One of the most important aspects of dealing with events through jQuery is the bind() and unbind() methods. As the names imply, they will simply attach and unattach code to one or several events on a set of elements. We saw a very simple usage example for the bind() method in the introduction chapter for events, and here is a more complete one:
-
-
