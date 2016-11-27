@@ -22,7 +22,6 @@
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Purchase Something<span class="caret"></span> </a>
 							<ul class="dropdown-menu">
-								<li><a href="vitamins.php">Vitamins</a></li>
 								<li><a href="medication.php">Medication</a></li>
 							</ul>
 						</li>	
@@ -53,14 +52,16 @@
 								<td data-th="Product">
 									<div class="row">
 										<div class="col-sm-2">
-											<img id="small-pic2" src="images/vitamind.jpg"></img>
+											<img id="small-pic2" src="images/benadryl.jpg"></img>
 										</div>
 										<div class="col-sm-10">
 											<h4 class="nomargin"><input type="hidden" name="name1" value="Product 1">
-												Vitamin D Supplements
+												Benadryl
 											</input>	
 											</h4>
-											<p>Vitamin D supplements are known for boosting the immune system, stopping development of rickets and an increase in energy</p>
+											<p>
+												A medication which reduces itching, sneezing, coughing through because of its properties as an anti-histamine.
+											</p>
 										</div>	
 									</div>
 								</td>
@@ -87,13 +88,15 @@
 								<td data-th="Product">
 									<div class="row">
 										<div class="col-sm-2">
-											<img src="images/omega-3.jpg" id="small-pic"></img>
+											<img src="images/motrin.jpg" id="small-pic"></img>
 										</div>
 										<div class="col-sm-10">
 											<h4 >
-												Omega 3
+												Motrin 
 											</h4>
-											<p>Omega 3 is known for boosting your memory, concentration and focus during your daily tasks!</p>
+											<p>
+												Pain Reliever and Fever Reducer 
+											</p>
 										</div>	
 									</div>
 								</td>

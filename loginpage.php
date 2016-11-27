@@ -32,7 +32,10 @@
 									  		<form name="loginform" id="loginform" method="POST">
 										    	Username:<input type="text" name="username" id="username"></input>
 										    	Password:<input type="password" name="password" id="password"></input>
+										    	<button type="submit" id="button"> Click me</button>
+
 										    	<button type="submit" id="button" name="login-button"> Click me</button>
+
 									   		</form>
 									  </div>
 								</div>

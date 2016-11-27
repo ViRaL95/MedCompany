@@ -53,8 +53,8 @@ ul li a, .navbar-brand{
 color:white;
 }
 
-#small-pic2{
+#small-pic2, #small-pic{
   max-width:50%;
-  max-height: 50%;
-
+  max-height: 40%;
+  
 }
