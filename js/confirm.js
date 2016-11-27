@@ -10,13 +10,14 @@ $.ajax({
 	success: function(response){
 		console.log("response was "+response);
 		if(response=="Login Succesfull"){
-			<?php
-			header("Location: ../MedCompany/homepage.php"); 
-			?>
+			window.location="../MedCompany/homepage.php";
 		}
 		else{
-			$("#error").html('<div class="alert alert-info" role="alert">;' +response+ '</div>');
+			$("#error").fadeIn(5000, function(){
+				$("#error").html('<div class="alert alert-info" role="alert">Wrong Username and Password  </div>');
 
+			});
+			
 		}
 
 	}
@@ -24,6 +25,6 @@ $.ajax({
 
 });
 
-
+return false;
 }
 });

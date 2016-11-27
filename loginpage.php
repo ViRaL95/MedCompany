@@ -18,7 +18,7 @@
 			<div class="container">
 				<div class="jumbotron">
 					<h3><p>Welcome To Vi_ral's Pharmaseuticals</p></h3>
-					<h4>Login Name and Password provided for Employers <br> Username:User Password:Strong</h4>
+					<h4>This website is simply a dummy  website with user login/signout/and shopping-car <br> Username:Vi_ral Password:M</h4>
 				</div>
 
 				<div id="error"></div>	
@@ -45,8 +45,8 @@
 
 		
 		<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
-		<script src="js/bootstrap.js"></script>
-		<script type="text/javascript" src="js/javascript.js"></script>
+		<script src="../MedCompany/js/bootstrap.js"></script>
+		<script type="text/javascript" src="../MedCompany/js/javascript.js"></script>
 		<script type="text/javascript" src="js/confirm.js"></script>
 	</body>
 </html>

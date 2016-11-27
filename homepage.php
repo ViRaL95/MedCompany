@@ -22,17 +22,17 @@
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Purchase Something<span class="caret"></span> </a>
 							<ul class="dropdown-menu">
-								<li><a href="vitamins.html">Vitamins</a></li>
+								<li><a href="vitamins.php">Vitamins</a></li>
 								<li><a href="supplements.html">Supplements</a></li>
 								<li><a href="medication.html">Medication</a></li>
 							</ul>
 						</li>	
 						<li><a href="aboutus.html">About Us</a></li>
-						<li><a href="checkout.html">Contact</a></li>
+						<li><a href="checkout.php">Contact</a></li>
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right" style="background-color:#2a6cd6"role="navigation">
-						  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+						  <li><a href="/code/MedCompany/loginpage.php"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
 					</ul>
 				</div>
 			</ul>
