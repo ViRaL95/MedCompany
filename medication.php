@@ -1,3 +1,6 @@
+<?php
+include_once'./php/redirect.php';
+?>
 <!DOCTYPE HTML>
 <head>
 		<meta charset="UTF-8">
@@ -22,6 +25,7 @@
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Purchase Something<span class="caret"></span> </a>
 							<ul class="dropdown-menu">
+								<li><a href="vitamins.php">Vitamins</a></li>
 								<li><a href="medication.php">Medication</a></li>
 							</ul>
 						</li>	
@@ -29,7 +33,8 @@
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right" style="background-color:#2a6cd6"role="navigation">
-						  <li><a href="/code/MedCompany/loginpage.php"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+					<li><a href="./checkout.php" id="check-out"><span class="glyphicon glyphicon-shopping-cart"></span>Check Out</a></li>
+						  <li><a href="#" id="sign-out"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
 					</ul>
 				</div>
 			</ul>
@@ -37,25 +42,25 @@
 
 			<div class="container">
 					<table class="table table-hover table-condensed">
-						<thead>
-							<tr>
-								<th style="width:50%">Product</th>
-								<th style="width:10%">Price</th>
-								<th style="width:10%">Quantity</th>
-								<th style="width:10%">Subtotal</th>
-								<th style="width:20%"></th>
-							</tr>
-						</thead>
-					<form id="vitamins-product-1" method="POST">	
+				<thead>
+					<tr>
+						<th style="width:50%">Product</th>
+						<th style="width:10%">Price</th>
+						<th style="width:10%">Quantity</th>
+						<th style="width:10%">Subtotal</th>
+						<th style="width:20%"></th>
+					</tr>
+				</thead>
+					<form id="medication-product-1" method="POST">	
 						<tbody>
 							<tr>
 								<td data-th="Product">
 									<div class="row">
 										<div class="col-sm-2">
-											<img id="small-pic2" src="images/benadryl.jpg"></img>
+											<img id="small-pic2" src="images/benadryl.png"></img>
 										</div>
 										<div class="col-sm-10">
-											<h4 class="nomargin"><input type="hidden" name="name1" value="Product 1">
+											<h4 class="nomargin"><input type="hidden" name="name1" value="Benadryl">
 												Benadryl
 											</input>	
 											</h4>
@@ -66,7 +71,7 @@
 									</div>
 								</td>
 
-								<td data-th="Price"><input type="hidden" name="Price1" value=0199> 
+								<td data-th="Price"><input type="hidden" name="Price1" value=01.99> 
 									$1.99</input>
 								</td>
 
@@ -76,13 +81,14 @@
 
 								<td data-th="Subtotal" id="subtotal-1" name="Subtotal" class="text-center">0</td>
 								<td>
-									<button type="button" id="button" class="btn btn-primary">
+									<input type="hidden" name="step" value="1"></input>
+									<button type="button" id="button1" name="button-1"class="btn btn-primary">
    										 Add To Cart<span class="glyphicon glyphicon-shopping-cart"></span>
 									</button>
 								</td>
 							</tr>
 					</form>	
-					<form id="vitamins-product-2" method="POST">
+					<form id="medication-product-2" method="POST">
 
 							<tr>
 								<td data-th="Product">
@@ -92,6 +98,7 @@
 										</div>
 										<div class="col-sm-10">
 											<h4 >
+											<input type="hidden" name="name2" value="Motrin"></input>
 												Motrin 
 											</h4>
 											<p>
@@ -102,16 +109,21 @@
 								</td>
 
 								<td data-th="Price">
+								<input type="hidden" name="Price2" value="3.99">
 									$3.99
+								</input>	
 								</td>
 
 								<td data-th="Quantity">
-									<input type="number" id="amount2" min="0" class="form-control text-center" value="0"></input>
+									<input type="number"      name="Quantity2"
+									 id="amount2" min="0" class="form-control text-center" value="0"></input>
 								</td>
 
-								<td data-th="Subtotal" id="subtotal-2"  class="text-center">0</td>
+								<td data-th="Subtotal" id="subtotal-2" 
+								name="Subtotal" class="text-center">0</td>
 								<td>
-									<button type="button2" id="button2" class="btn btn-primary">
+								<input type="hidden" name="step" value="2"></input>
+									<button type="button2" id="button2" name="button-2" class="btn btn-primary">
    										 Add To Cart<span class="glyphicon glyphicon-shopping-cart"></span>
 									</button>
 								</td>
@@ -123,10 +135,11 @@
 			</div>
 
 
-		<script src="http://code.jquery.com/jquery-3.1.1.js">
+		<script  type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.js">
 		</script>
-		<script src="js/bootstrap.js"></script>
-		<script src="js/vitamins.js"></script>
+		<script type="text/javascript" src="js/medication.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/signout.js"></script>
 	</body>
 
 </html>

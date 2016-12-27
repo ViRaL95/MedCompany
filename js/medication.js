@@ -39,39 +39,29 @@ if(amount2.value==0){
 });
 
 button1.onclick=function(){
-	console.log("entered button click ");	
-	var data=$("#vitamins-product-1").serialize();
-	console.log(data);
+	var data=$("#medication-product-1").serialize();
 	$.ajax({
 		type:'POST',
-		url:'./php/add-vitamins-to-cart.php',
+		url:'./php/add-medicine-to-cart.php',
 		data:data,
-
+       
 		success: function(response){
 			console.log(response);
-
 		}
-
 	});
 
 
 };
 button2.onclick=function(){
-	console.log("entered button click ");	
-	var data=$("#vitamins-product-2").serialize();
-	console.log(data);
+	var data=$("#medication-product-2").serialize();
 	$.ajax({
 		type:'POST',
-		url:'./php/add-vitamins-to-cart.php',
+		url:'./php/add-medicine-to-cart.php',
 		data:data,
 
 		success: function(response){
 			console.log(response);
 		}
-
-
-
-
 
 	});
 

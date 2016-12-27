@@ -1,4 +1,8 @@
-<!DOCTYPE HTML>
+<?php
+//include_once'./php/redirect.php';
+?>
+
+ <!DOCTYPE HTML>
 	<head>
 
 		<meta charset="UTF-8">
@@ -8,39 +12,39 @@
 		<title>Bootstrap Tutorial </title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-	</head>
-
-	<body>
-			<ul class="nav nav-tabs">
+		<ul class="nav nav-tabs">
 				<div class="container-fluid">
 					<div class="navbar-header" style="background-color:#2a6cd6">
 						<a class="navbar-brand" href="#">The Med Company</a>
 					</div>
 
 					<ul class="nav navbar-nav" style="background-color: #2a6cd6" role="navigation">		
-						<li class="active"><a href="homepage.html"> Home Page</a> </li>
+						<li class="active"><a href="homepage.php"> Home Page</a> </li>
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Purchase Something<span class="caret"></span> </a>
 							<ul class="dropdown-menu">
 								<li><a href="vitamins.php">Vitamins</a></li>
-								<li><a href="supplements.html">Supplements</a></li>
-								<li><a href="medication.html">Medication</a></li>
+								
+								<li><a href="medication.php">Medication</a></li>
 							</ul>
 						</li>	
 						<li><a href="aboutus.html">About Us</a></li>
-						<li><a href="checkout.php">Contact</a></li>
+						
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right" style="background-color:#2a6cd6"role="navigation">
-						  <li><a href="/code/MedCompany/loginpage.php"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+						 <li><a href="./checkout.php" id="check-out"><span class="glyphicon glyphicon-shopping-cart"></span>Check Out</a></li>
+						  <li><a href="#" id="sign-out"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
 					</ul>
 				</div>
 			</ul>
-		
+	</head>
 
-		
+			
+	<body id="home-body">	
 
-		<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
-		<script src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/signout.js"></script>
 	</body>
 </html>

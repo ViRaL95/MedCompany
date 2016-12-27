@@ -1,3 +1,6 @@
+<?php
+include_once'./php/redirect.php';
+?>
 <!DOCTYPE HTML>
 <head>
 		<meta charset="UTF-8">
@@ -30,7 +33,8 @@
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right" style="background-color:#2a6cd6"role="navigation">
-						  <li><a href="/code/MedCompany/loginpage.php"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+					<li><a href="./checkout.php" id="check-out"><span class="glyphicon glyphicon-shopping-cart"></span>Check Out</a></li>
+						  <li><a href="#" id="sign-out"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
 					</ul>
 				</div>
 			</ul>
@@ -56,7 +60,7 @@
 											<img id="small-pic2" src="images/vitamind.jpg"></img>
 										</div>
 										<div class="col-sm-10">
-											<h4 class="nomargin"><input type="hidden" name="name1" value="Product 1">
+											<input type="hidden" name="name1" value="Vitamin D Supplements">
 												Vitamin D Supplements
 											</input>	
 											</h4>
@@ -65,7 +69,7 @@
 									</div>
 								</td>
 
-								<td data-th="Price"><input type="hidden" name="Price1" value=0199> 
+								<td data-th="Price"><input type="hidden" name="Price1" value=01.99> 
 									$1.99</input>
 								</td>
 
@@ -75,7 +79,8 @@
 
 								<td data-th="Subtotal" id="subtotal-1" name="Subtotal" class="text-center">0</td>
 								<td>
-									<button type="button" id="button" class="btn btn-primary">
+									<input type="hidden" name="step" value="1"></input>
+									<button type="button" name="button1" id="button1" class="btn btn-primary">
    										 Add To Cart<span class="glyphicon glyphicon-shopping-cart"></span>
 									</button>
 								</td>
@@ -90,8 +95,10 @@
 											<img src="images/omega-3.jpg" id="small-pic"></img>
 										</div>
 										<div class="col-sm-10">
-											<h4 >
+											<h4>
+											<input type="hidden" name="name2" value="Omega 3">
 												Omega 3
+											</input>	
 											</h4>
 											<p>Omega 3 is known for boosting your memory, concentration and focus during your daily tasks!</p>
 										</div>	
@@ -99,16 +106,19 @@
 								</td>
 
 								<td data-th="Price">
+								<input type="hidden" name="Price2" value=3.99> 
 									$3.99
+								</input>	
 								</td>
 
 								<td data-th="Quantity">
-									<input type="number" id="amount2" min="0" class="form-control text-center" value="0"></input>
+									<input type="number" name="Quantity2" id="amount2" min="0" class="form-control text-center" value="0"></input>
 								</td>
 
 								<td data-th="Subtotal" id="subtotal-2"  class="text-center">0</td>
 								<td>
-									<button type="button2" id="button2" class="btn btn-primary">
+								<input type="hidden" name="step" value="2"></input>
+									<button type="button" name="button2" id="button2" class="btn btn-primary">
    										 Add To Cart<span class="glyphicon glyphicon-shopping-cart"></span>
 									</button>
 								</td>
@@ -120,10 +130,11 @@
 			</div>
 
 
-		<script src="http://code.jquery.com/jquery-3.1.1.js">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.js">
 		</script>
-		<script src="js/bootstrap.js"></script>
-		<script src="js/vitamins.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/vitamins.js"></script>
+		<script type="text/javascript" src="js/signout.js"></script>
 	</body>
 
 </html>

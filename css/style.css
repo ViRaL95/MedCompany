@@ -16,6 +16,11 @@ height:20%;
 margin:0 auto;
 
 }
+#login-box{
+min-width:60%;
+position:relative;
+
+}
 .homepage-img img{
   width:100%;
   height:100%;
@@ -58,3 +63,8 @@ color:white;
   max-height: 40%;
   
 }
+#home-body{
+  background-image: url('../images/space.jpg');
+  width:100%;
+  height:100%;
+} 

@@ -3,7 +3,7 @@
 	    button=document.getElementById("button");
 		button.disabled="true";
 			
-		$("#loginname").keyup(function(){
+		$("#username").keyup(function(){
 			loginname=document.getElementById("username");
 			password=document.getElementById("password");
 			//if login name does contain a value
