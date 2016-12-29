@@ -6,9 +6,6 @@ Synopsis
 -JQuery
 -Javascript Library known as Vex was used for alert messages
 
-Purpose:Showcase my front-end and back-end skills. 
-
-
 -This project contains a user-login form, with one username and password. An error message is given when the user enters the wrong password. 
 A table was created for the user login. To avoid redundancy a sign up page was not included
 
@@ -22,32 +19,30 @@ The PHP code adds the respective product to its respective table. There are two 
 and accessing data from databuse using POST method. 
 All data can be edited and total subtotal was calculated. When the user hits the purchase button, an option to see my Resume is given.
 The alert message is given to the user, whether or not they would like to See My Resume, which opens up a PDF of my Resume. 
--Signout page warns user that all data will be deleted if signed out
+-Signout page warns user that all data will be deleted if signed out. If interested please see: 
+http://github.hubspot.com/vex/docs/welcome/
+or 
 
-Code Example
 
-Show what the library does as concisely as possible, developers should be able to figure out how your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+Code Example:
+The following SQL query updates the medtable and sets the amount, subtotal, and quantity to their respective values if there are already purchases made. The quantity, subtotal and product name are retrieved all through POST method form an HTML form. 
+UPDATE Operation:
+$update1="UPDATE medtable SET Amount= Amount+'$quantity', Subtotal=Subtotal+'$subtotal' WHERE Product='$name' ";
 
-Motivation
+If purchases havent been made (which can be tested if mysqli_num_rows returns 0) then an Insertion Operation was made
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain why the project exists.
+INSERTION Operation:
+$update1="INSERT INTO medtable (Product, Price, Amount, Subtotal) VALUES ('$name', '$price', '$quantity', $subtotal)";
 
-Installation
+In order to update the total-price table, I checked whether the user has already purchased something. If he hasnt purchased something an INSERTION operation was made. If he has purchased something then an UPDATE/SET operation was made.
 
-Provide code examples and explanations of how to get the project.
+INSERTION Operation(No entries in totalprice):
+If there was no entries in the vitamintable or medtable and an insertion operation was performed and a NULL value was entered into the table. In order to account for this the IFNULL operation was used and a 0 was instead entered if either table was empty
 
-API Reference
+$update1="INSERT INTO totalprice (total) VALUES (SELECT IFNULL(SUM(Subtotal),0) FROM medtable)+(SELECT IFNULL(SUM(Subtotal),0) FROM vitaminstable)";
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
+UPDATE operation(entry in totalprice):
+$update2="UPDATE totalprice SET total=(SELECT IFNULL(SUM(Subtotal),0) FROM medtable)+(SELECT IFNULL(SUM(Subtotal),0) FROM vitaminstable)";
 
-Tests
-
-Describe and show how to run the tests with code examples.
-
-Contributors
-
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
-
-License
-
-A short snippet describing the license (MIT, Apache, etc.)
+Motivation:
+Showcase my front-end and back-end skills, SQL skills, and Javascript skills. Understand the fundamentals of how a shopping cart works
