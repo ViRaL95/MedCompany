@@ -1,9 +1,15 @@
 Synopsis
+
 -Viral Production
+
 -Produced in LAMP (Linux Apache MySQL PHP) Environment
+
 -Bootstrap 
+
 -Javascript
+
 -JQuery
+
 -Javascript Library known as Vex was used for alert messages
 
 -This project contains a user-login form, with one username and password. An error message is given when the user enters the wrong password. 
