@@ -1,6 +1,3 @@
-<?php
-//include_once'./php/redirect.php';
-?>
 <!DOCTYPE HTML>
 <head>
 	<meta charset="UTF-8">
@@ -10,8 +7,8 @@
 	<title>Shopping Cart </title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/style.css"></link>
-	<script src="vex/dist/js/vex.combined.js"></script>
-	<script> vex.defaultOptions.className = 'vex-theme-os'</script>
+	<script type="text/javascript" src="vex/dist/js/vex.combined.js"></script>
+	<script type="text/javascript"> vex.defaultOptions.className = 'vex-theme-os'</script>
 	<link rel="stylesheet" type="text/css"  href="vex/dist/css/vex.css"></link>
 	<link rel="stylesheet" type="text/css" href="vex/dist/css/vex-theme-os.css"></link>		
 	</script>
@@ -36,7 +33,7 @@
 								<li><a href="medication.php">Medication</a></li>
 							</ul>
 						</li>	
-						<li><a href="aboutus.html">About Us</a></li>
+						<li><a href="aboutus.php">About Us</a></li>
 						
 					</ul>
 
@@ -85,7 +82,7 @@
 			echo '<table class="table table-hover table-condensed" id="table-'.$row["Product"].'"';
 			echo'<tr>';
 			echo '<td style="width:50%" name="name-'.$row["Product"].'">'.$row["Product"].'</td>';
-			echo '<td style="width:20%"> <input type="number" id="num-'.$row["Product"].'" min="0" name="amount" value="'.$row['Amount'].'"</input></td>';
+			echo '<td style="width:20%"> <input type="number" id="num-'.$productname[0].'" min="0" name="amount" value="'.$row['Amount'].'"</input></td>';
 			echo '<td style="width:10%" name="'.$row["Price"].'">'.$row["Price"].'</td>';
 			echo '<td id="subtotal-'.$productname[0].'"style="width:10%" value="'.$row["Subtotal"].'">'.$row["Subtotal"].'</td><input type="hidden" name="hidden-'.$productname[0].'"id="hidden-'.$productname[0].'"value="'.$row["Subtotal"].'"</input>';
 			echo '<td style="width:10%"><input type="button" name="'.$row["Product"].'" id="'.$productname[0].'" value="Submit" class="btn btn-primary"></input></td>';
@@ -104,7 +101,7 @@
 				echo "<hr>";
 				echo"<tr>";
 				echo'<td style="width:90%"></td>';
-				echo '<td style="width:10%" id="Final-Subtotal">'.$row['total'].'</td>';
+				echo '<td style="width:10%" id="Final-Subtotal">$'.$row['total'].'</td>';
 				echo '<td><input type="button" name="purchase" value="Purchase" id="purchase" class="btn btn-primary"></input></td>';
 				echo '</tr>';	
 				echo'</table>';
@@ -113,7 +110,7 @@
 	</div>		
 
 		<script type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.js"></script>
-		<script type="text/javascript" src="js/checkout.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/checkout.js"></script>
 		<script type="text/javascript" src="js/signout.js"></script>
 	</body>

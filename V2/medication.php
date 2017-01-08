@@ -1,16 +1,14 @@
-<?php
-include_once'./php/redirect.php';
-?>
-<!DOCTYPE HTML>
+<html ng-app="myModule1">
 <head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<title>Bootstrap Tutorial </title>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Shop For Medication </title>
 		
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css"  href="vex/dist/css/vex.css"/>
+		<link rel="stylesheet" type="text/css" href="vex/dist/css/vex-theme-os.css"/>
 </head>
 
 	<body>
@@ -29,7 +27,7 @@ include_once'./php/redirect.php';
 								<li><a href="medication.php">Medication</a></li>
 							</ul>
 						</li>	
-						<li><a href="aboutus.html">About Us</a></li>
+						<li><a href="aboutus.php">About Us</a></li>
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right" style="background-color:#2a6cd6"role="navigation">
@@ -40,8 +38,8 @@ include_once'./php/redirect.php';
 			</ul>
 		
 
-			<div class="container">
-					<table class="table table-hover table-condensed">
+			<div class="container" ng-controller="mycontroller1" ng-cloak>
+				<table class="table table-hover table-condensed">
 				<thead>
 					<tr>
 						<th style="width:50%">Product</th>
@@ -61,8 +59,7 @@ include_once'./php/redirect.php';
 										</div>
 										<div class="col-sm-10">
 											<h4 class="nomargin"><input type="hidden" name="name1" value="Benadryl">
-												Benadryl
-											</input>	
+												Benadryl</input>	
 											</h4>
 											<p>
 												A medication which reduces itching, sneezing, coughing through because of its properties as an anti-histamine.
@@ -76,20 +73,19 @@ include_once'./php/redirect.php';
 								</td>
 
 								<td data-th="Quantity">
-									<input type="number" name="Quantity1" id="amount" class="form-control text-center" min="0" value="0"></input>
+									<input type="number" ng-model="subtotal.subtotal1" ng-init="subtotal.subtotal1=0" name="Quantity1" ng-change="changed()" id="amount1" class="form-control text-center" min="0"/>
 								</td>
 
-								<td data-th="Subtotal" id="subtotal-1" name="Subtotal" class="text-center">0</td>
+								<td data-th="Subtotal" id="subtotal-1" name="Subtotal"  class="text-center" ng-bind="1.99*subtotal.subtotal1"></td>
 								<td>
 									<input type="hidden" name="step" value="1"></input>
-									<button type="button" id="button1" name="button-1"class="btn btn-primary">
+									<button type="button" id="button1" name="button-1" class="btn btn-primary">
    										 Add To Cart<span class="glyphicon glyphicon-shopping-cart"></span>
 									</button>
 								</td>
 							</tr>
 					</form>	
 					<form id="medication-product-2" method="POST">
-
 							<tr>
 								<td data-th="Product">
 									<div class="row">
@@ -115,31 +111,32 @@ include_once'./php/redirect.php';
 								</td>
 
 								<td data-th="Quantity">
-									<input type="number"      name="Quantity2"
-									 id="amount2" min="0" class="form-control text-center" value="0"></input>
+									<input type="number" ng-model="subtotal.subtotal2" ng-change="changed2()" ng-init="subtotal.subtotal2=0" name="Quantity2"
+									 id="amount2" min="0" class="form-control text-center"></input>
 								</td>
 
 								<td data-th="Subtotal" id="subtotal-2" 
-								name="Subtotal" class="text-center">0</td>
+								name="Subtotal" ng-bind="3.99*subtotal.subtotal2" class="text-center" >
+								</td>
 								<td>
 								<input type="hidden" name="step" value="2"></input>
-									<button type="button2" id="button2" name="button-2" class="btn btn-primary">
+									<button type="button" id="button2" name="button-2"  class="btn btn-primary">
    										 Add To Cart<span class="glyphicon glyphicon-shopping-cart"></span>
 									</button>
 								</td>
 							</tr>	
 						</tbody>
 					</form>	
-					</table>
-
+				</table>
 			</div>
-
-
-		<script  type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.js">
-		</script>
-		<script type="text/javascript" src="js/medication.js"></script>
+		<script  type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>	
 		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="vex/dist/js/vex.combined.js"></script>
+		<script type="text/javascript"> vex.defaultOptions.className = 'vex-theme-os'</script>
+		<script type="text/javascript" src="js/medication.js"></script>
 		<script type="text/javascript" src="js/signout.js"></script>
+
 	</body>
 
 </html>

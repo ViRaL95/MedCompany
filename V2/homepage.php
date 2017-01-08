@@ -1,7 +1,3 @@
-<?php
-//include_once'./php/redirect.php';
-?>
-
  <!DOCTYPE HTML>
 	<head>
 
@@ -9,9 +5,13 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>Bootstrap Tutorial </title>
+		<title>Home Page </title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="vex/dist/js/vex.combined.js"></script>
+		<script type="text/javascript"> vex.defaultOptions.className = 'vex-theme-os'</script>
+		<link rel="stylesheet" type="text/css"  href="vex/dist/css/vex.css"></link>
+		<link rel="stylesheet" type="text/css" href="vex/dist/css/vex-theme-os.css"></link>		
 		<ul class="nav nav-tabs">
 				<div class="container-fluid">
 					<div class="navbar-header" style="background-color:#2a6cd6">
@@ -28,7 +28,7 @@
 								<li><a href="medication.php">Medication</a></li>
 							</ul>
 						</li>	
-						<li><a href="aboutus.html">About Us</a></li>
+						<li><a href="aboutus.php">About Us</a></li>
 						
 					</ul>
 

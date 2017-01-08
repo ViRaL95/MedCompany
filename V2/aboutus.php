@@ -1,21 +1,25 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title> The Carousel </title>
+		<title> About Us </title>
 				<meta charset="UTF-8">
 				<meta http-equiv="X-UA-Compatible" content="IE=edge">
 				<meta name="viewport" content="width=device-width, initial-scale=1">
 				<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 				<link href="http://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet" type="text/css">
 				<link rel="stylesheet" type="text/css" href="css/style.css">
+				<script type="text/javascript" src="vex/dist/js/vex.combined.js"></script>
+				<script type="text/javascript"> vex.defaultOptions.className = 'vex-theme-os'</script>
+				<link rel="stylesheet" type="text/css"  href="vex/dist/css/vex.css"></link>
+				<link rel="stylesheet" type="text/css" href="vex/dist/css/vex-theme-os.css"></link>		
 	</head>
 	<body>
-			<ul class="nav nav-tabs">
+			<nav class="nav nav-tabs">
 				<div class="container">
 					<div class="navbar-header" style="background-color:#2a6cd6">
 						<a class="navbar-brand" href="#">The Med Company</a>
 					</div>
-
+					<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav" style="background-color: #2a6cd6" role="navigation">		
 						<li ><a href="homepage.php"> Home Page</a> </li>
 						<li class="dropdown">
@@ -25,16 +29,15 @@
 								<li><a href="medication.php">Medication</a></li>
 							</ul>
 						</li>	
-						<li><a href="aboutus.html">About Us</a></li>
-						<li><a href="checkout.php">Contact</a></li>
+						<li class="active"><a href="aboutus.php">About Us</a></li>
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right" style="background-color:#2a6cd6"role="navigation">
-						<li><a href="/code/MedCompany/checkout.php" id="check-out"><span class="glyphicon glyphicon-shopping-cart"></span>Check Out</a></li>
+						<li><a href="checkout.php" id="check-out"><span class="glyphicon glyphicon-shopping-cart"></span>Check Out</a></li>
 						  <li><a href="#" id="sign-out"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
 					</ul>
 				</div>
-			</ul>
+			</nav>
 			
 		<div id="theCarousel" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
@@ -51,17 +54,6 @@
 							<p>	All FDA Approved Medication. Sent Straight to Your Nearest Pharmacy!</p>
 						  	<p>A Vi_ral Production</p>
 
-								<div class="dropdown">
-									<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-										<span class="caret"></span>
-									</button>
-
-									<ul class="dropdown-menu dropdown-menu-right">
-										<li><a href="#">RESUME</a></li>
-										<li><a href="#">EMAIL</a></li>
-									</ul>
-
-								</div>
 
 					</div>		
 				</div>	
@@ -70,7 +62,7 @@
 					<div class="slide2"></div>
 					<div class="carousel-caption">
 						<h1>Can Deliver Full Scale Web Applications. </h1>
-							<p> Using Skills in HTML, CSS, PHP, Javascript, Jquery, Bootstrap</p>
+							<p> Using Skills in HTML, CSS, PHP, Javascript, Jquery, Bootstrap, Angular.js, and Python</p>
 					</div>
 				</div>
 

@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>Bootstrap Tutorial </title>
+		<title>The Med Company</title>
 
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -13,11 +13,11 @@
 
 	</head>
 
-	<body>
+	<body class="login-body">
 		<div class="exterior">
 			<div class="container">
 				<div class="jumbotron">
-					<h3><p>Welcome To Vi_ral's Pharmaseuticals</p></h3>
+					<h3><p>Welcome To Vi_ral's Pharmaceuticals</p></h3>
 					<h4>This website is simply a dummy  website with user login/signout/and shopping-cart <br> Username:User Password:Strong </h4>
 				</div>
 			</div>	
@@ -31,8 +31,8 @@
 									  <div class="panel-body">
 									  		<form name="loginform" id="loginform" method="POST">
 									  		<div class="row">
-										    	Username:<input type="text" name="username" id="username"></input>
-										    	Password:<input type="password" name="password" id="password"></input>
+										    	Username:<input type="text" name="username" id="username" style="width:40%"></input><br>
+										    	Password:<input type="password" name="password" id="password" style="width:40%"></input><br>
 
 										    	<button type="submit" id="button"> Click me</button>
 									   		</form>

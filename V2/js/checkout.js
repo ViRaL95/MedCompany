@@ -18,6 +18,14 @@ var subtotalvitamindval=document.getElementById("hidden-Vitamin");
 var finaltotal=document.getElementById("Final-Subtotal");
 var purchase=document.getElementById("purchase");
 
+if(finaltotal.innerHTML=="$0.00"){
+purchase.disabled=true;
+}
+else{
+purchase.disabled=false;
+}
+
+
 $(numbenadryl).bind("keyup input", function(){
 var value=numbenadryl.value;
 value=value*1.99;
@@ -59,6 +67,16 @@ subtotalvitamindval.value=value;
 			data:data,
 			success:function(response){
 			finaltotal.innerHTML=response;
+			if(finaltotal.innerHTML=="$0.00"){
+				purchase.disabled=true;
+			}
+			else{
+				purchase.disabled=false;
+			}
+			BenadrylAmount=document.getElementById("num-Benadryl");
+				if(BenadrylAmount.value==0){
+				$("#form-Benadryl").fadeOut();
+				}
 			}
 			})
 
@@ -73,7 +91,17 @@ subtotalvitamindval.value=value;
 				url:"./php/update-table.php",
 				data:data,
 				success:function(response){
-				finaltotal.innerHTML=response;					
+				finaltotal.innerHTML=response;	
+				if(finaltotal.innerHTML=="$0.00"){
+					purchase.disabled=true;
+				}
+				else{
+					purchase.disabled=false;
+				}
+				MotrinAmount=document.getElementById("num-Motrin");
+				if(MotrinAmount.value==0){
+					$("#form-Motrin").fadeOut();
+				}			
 				}
 			})
 
@@ -89,7 +117,17 @@ subtotalvitamindval.value=value;
 				data:data,
 			success: function (response){
 			console.log(response);
-			finaltotal.innerHTML=response;					
+			finaltotal.innerHTML=response;	
+			if(finaltotal.innerHTML=="$0.00"){
+				purchase.disabled=true;
+			}
+			else{
+				purchase.disabled=false;
+			}
+			VitaminDAmount=document.getElementById("num-Vitamin");	
+			if(VitaminDAmount.value==0){
+				$("#form-Vitamin").fadeOut();
+			}			
 			}	
 			});
 		}
@@ -103,11 +141,22 @@ subtotalvitamindval.value=value;
 				url:"./php/update-table.php",
 				data:data,
 				success: function (response){
-				finaltotal.innerHTML=response;					
+				finaltotal.innerHTML=response;
+				if(finaltotal.innerHTML=="$0.00"){
+					purchase.disabled=true;
+				}
+				else{
+					purchase.disabled=false;
+				}
+			Omega3Amount=document.getElementById("num-Omega");	
+			if(Omega3Amount.value==0){
+				$("#form-Omega").fadeOut();
+			}							
 				}
 			});
 		}
 	}
+
 
 	purchase.onclick=function(){
 	vex.dialog.buttons.YES.text="My Dope Resume!"
@@ -116,10 +165,8 @@ subtotalvitamindval.value=value;
     message: 'Thanks for taking a look at my dummy medical management website!\n Check out my resume below!',
     callback: function (value) {
         if (value) {
-            console.log('Successfully destroyed the planet.')
-        } else {
-            console.log('Chicken.')
-        }
+        	window.open("Varun-Rao-Resume.pdf");
+        } 
     }
 })
 	}
